@@ -4,13 +4,14 @@ import cn from 'classnames';
 import { mainMenu } from '~/utils/consts';
 import More from './more';
 import New from './new';
+import { useAccount } from '~/store/auth/hooks';
 
 export default function Menu() {
     return (
         <nav className='mt-0.5 mb-1'>
             {
                 mainMenu.map((menu, index) => (
-                    <NavLink to={menu.path} className='py-1 block group'>
+                    <NavLink key={index} to={typeof menu.path === 'function' ? menu.path() : menu.path} className='py-1 block group'>
                         {({ isActive }) => (
                             <div className={cn('inline-flex transitions-colors items-center rounded-full p-3 gap-5 group-hover:bg-[#eff3f41a]', {
                                 "font-bold": isActive
@@ -30,7 +31,8 @@ export default function Menu() {
                             </div>
                         )}
                     </NavLink>
-                ))}
+                ))
+            }
 
             <More />
 
