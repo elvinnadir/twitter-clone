@@ -3,9 +3,11 @@
 @tailwind utilities;
 
 body{
-    @apply bg-black text-white antialiased;
+    @apply bg-[color:var(--background-primary)] text-[color:var(--color-base)];
 }
-
+.shadow-box{
+    box-shadow: var(--box-shadow);
+}
 /* 
 left sidebar-275px
 right sidebar 350px

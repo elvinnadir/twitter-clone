@@ -15,12 +15,12 @@ export default function Search() {
     return (
         <div
             ref={ref}
-            className='min-h-[32px] h-[53px] mb-3 flex items-center bg-black top-0 sticky z-[10]'>
-            <label className='rounded-full h-[43px] relative bg-[#202327] w-full group border border-transparent focus-within:bg-black focus-within:border-[#1d9bf0]'>
+            className='min-h-[32px] h-[53px] mb-3 flex items-center bg-[color: var(--background-primary)] top-0 sticky z-[10]'>
+            <label className='rounded-full h-[43px] relative bg-[color:var(--background-third)] w-full group border border-transparent focus-within:bg-black focus-within:border-[color:var(--color-primary)]'>
                 <div className="w-[3.5rem] h-full flex items-center justify-center absolute top-0 left-0 pointer-events-none">
                     <svg
                         viewBox="0 0 24 24"
-                        className="h-[1.172rem] min-w-[2rem] text-[#71767b]"
+                        className="h-[1.172rem] min-w-[2rem] text-[color:var(--color-base-secondary)]"
                     >
                         <path
                             fill="currentColor"
@@ -41,7 +41,7 @@ export default function Search() {
                     <button
                         type="button"
                         onClick={() => setQuery('')}
-                        className="w-[22px] h-[22px] rounded-full bg-[#1d9bf0] flex items-center justify-center text-black min-w-[22px] absolute top-1/2 -translate-y-1/2 right-3"
+                        className="w-[22px] h-[22px] rounded-full bg-[color:var(--color-primary)] flex items-center justify-center text-black min-w-[22px] absolute top-1/2 -translate-y-1/2 right-3"
                     >
                         <svg viewBox="0 0 15 15" width={10} height={10}>
                             <path
@@ -53,7 +53,7 @@ export default function Search() {
                 )}
                 {focus && (
                     <div className="top-full w-full -translate-y-1 absolute bg-black shadow-box px-4 max-h-[calc(80vh-53px)] rounded-lg text-center">
-                        <p className="p-3 pt-5 text-[#71767b] leading-5">
+                        <p className="p-3 pt-5 text-[color:var(--color-base-secondary)] leading-5">
                             Try searching for people, lists, or keywords
                         </p>
                     </div>
